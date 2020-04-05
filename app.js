@@ -1,12 +1,14 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const userSchema = require('./schema/user');
+const userQuery = require('./query/userQuery');
 
 const app = express();
 
-// bind express with graphql
+
 app.use('/graphql', graphqlHTTP({
     userSchema,
+    rootValue: userQuery,
     graphiql: true
 }));
 

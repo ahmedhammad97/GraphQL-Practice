@@ -5,6 +5,6 @@ module.exports = {
         return mockedUsers[id];
     },
     allUsers: () => {
-        mockedUsers;
+        return mockedUsers;
     }
 };

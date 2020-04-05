@@ -1,8 +1,10 @@
+const mockedUsers = require('../data/users');
+
 module.exports = {
     user: ({ id }) => {
-        return "Happy User";
+        return mockedUsers[id];
     },
     allUsers: () => {
-        return ["User1", "User2"];
+        mockedUsers;
     }
 };

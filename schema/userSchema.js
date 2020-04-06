@@ -6,8 +6,19 @@ type Query {
     allUsers: [User]
 }
 
+type Mutation {
+    createUser(
+        id: Int!,
+        name: String,
+        age: Int,
+        country: Boolean
+    ): String
+    
+    createCountry(name: String!) : String
+}
+
 type User {
-    id: String!,
+    id: Int!,
     name: String,
     age: Int,
     country: Country
